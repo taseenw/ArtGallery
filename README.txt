@@ -1,5 +1,5 @@
 Student Name / Number: Taseen Waseq - 101222679
-Class: COMP 2406
+Class: Web Application Development
 Project Title: Final Term Project (A5)
 Date: 2022-12-09
 
