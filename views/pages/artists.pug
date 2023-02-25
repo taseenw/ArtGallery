@@ -1,0 +1,14 @@
+html 
+    head
+        title Artists
+        link(rel='stylesheet', href='/styles.css')
+
+
+    body
+        include ../components/navBar
+        h1 Artists
+        .artistsList
+            if artists && artists.length > 0 
+                each artist in artists
+                    a(href=`/artist/${artist}`)= artist
+                    br

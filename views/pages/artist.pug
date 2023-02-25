@@ -1,0 +1,15 @@
+html 
+    head
+        title Artist
+        link(rel='stylesheet', href='/styles.css')
+        script(src="/userOps.js")
+
+
+body
+        include ../components/navBar
+        h1 #{artist}
+        .artistArtList
+            ul
+                each artwork in artworks
+                    li
+                        a(href=`/artwork/${artwork._id}`)= artwork.name

@@ -1,0 +1,29 @@
+html 
+    head
+        title Artwork
+        link(rel='stylesheet', href='/styles.css')
+        script(src="/userOps.js")
+
+
+    body
+        include ../components/navBar
+        h1 Artwork - #{artwork.name}
+        .singleArtModal
+            img(src=artwork.image, width='400', height='400')
+            ul 
+                li Artist: #{artwork.artist}
+                li Year: #{artwork.year}
+                li Category: #{artwork.category}
+                li Medium: #{artwork.medium}
+                li Description: #{artwork.description}
+                li Likes: #{artwork.likes}
+                li 
+                    button(onClick="likePicture('"+artwork._id+"')") Like/Unlike
+                br
+                li
+                    //- add review
+                    input(type="hidden", id="artworkName", value=artwork.name)
+                    //- make text area required
+                    textarea(id="reviewInput", placeholder="Add a review", required)
+                    br
+                    button(onClick="addReview('"+artwork._id+"')") Add Review

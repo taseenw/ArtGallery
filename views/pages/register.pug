@@ -1,0 +1,18 @@
+html 
+    head
+        title Register
+        link(rel='stylesheet', href='/styles.css')
+        script(src="/userOps.js")
+
+
+    body
+        .centerModal
+            h2 Register
+            input#regUsername(type='text', placeholder='Username')
+            br
+            input#regPassword(type='password', placeholder='Password')
+            br
+            button#registerButton(onclick='register()') Register
+            br
+            a(href='/') Return to Login
+

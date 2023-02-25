@@ -1,0 +1,15 @@
+html 
+    head
+        title Likes
+        link(rel='stylesheet', href='/styles.css')
+
+
+    body
+        include ../components/navBar
+        h1 Likes
+        .likedList
+        each artwork in likedArtwork
+            .art
+            img(src=artwork.image, width='200', height='200')
+            br
+            a(href='/artwork/' + artwork._id) #{artwork.name}

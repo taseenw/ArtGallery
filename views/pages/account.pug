@@ -1,0 +1,23 @@
+html 
+    head
+        title Account
+        link(rel='stylesheet', href='/styles.css')
+        script(src="/userOps.js")
+
+
+    body
+        include ../components/navBar
+        h1 Account
+        .centerModal
+            h2 Change Account Type
+            br
+            br
+            //- make a select menu for patron or artist, make the selected option the user's current role
+            if user.isArtist
+                p Currently: Artist
+            else
+                p Currently: Patron
+            br
+            br
+            button(onclick='updateRole()') Change Role
+            

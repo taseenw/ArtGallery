@@ -1,0 +1,14 @@
+html 
+    head
+        title Reviews
+        link(rel='stylesheet', href='/styles.css')
+
+
+    body
+        include ../components/navBar
+        h1 Reviews
+        .reviewList
+            each review in reviews
+                .review
+                    a(href='/artwork/' + review.artworkID) #{review.artworkName}
+                    li  #{review.reviewBody}

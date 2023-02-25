@@ -1,0 +1,25 @@
+html 
+    head
+        title Home
+        link(rel='stylesheet', href='/styles.css')
+
+
+    body
+        include ../components/navBar
+        h1 Home
+        h2 Welcome, #{user.username}
+        
+        //- if artist href to add artwork
+        if user.isArtist
+            .artistOps
+                a(href='/addArtwork') Add Artwork
+
+        .artworks
+            ul
+                if art && art.length > 0 
+                    each artwork in art
+                        .art
+                            li
+                                img(src=artwork.image, width='200', height='200')
+                                br
+                                a(href='/artwork/' + artwork._id) #{artwork.name}

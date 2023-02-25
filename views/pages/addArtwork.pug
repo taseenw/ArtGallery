@@ -1,0 +1,24 @@
+html
+    head
+        title Add Artwork
+        link(rel='stylesheet', href='/styles.css')
+        script(src="/userOps.js")
+
+    body
+        include ../components/navBar
+        .addArtModal
+            h1 Add Artwork
+            input(type="text", id="artworkName", placeholder="Artwork Name", required)
+            br
+            input(type="year", id="artworkYear", placeholder="Year", required)
+            br
+            input(type="text", id="artworkCategory", placeholder="Category", required)
+            br
+            input(type="text", id="artworkMedium", placeholder="Medium", required)
+            br
+            input(type="text", id="artworkDescription", placeholder="Description", required)
+            br
+            input(type="text", id="artworkImage", placeholder="Image URL", required)
+            br
+            br
+            button(onClick="addArtwork()") Add Artwork
